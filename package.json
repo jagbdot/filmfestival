@@ -6,7 +6,7 @@
   "scripts": {
     "start": "parcel src/index.html --open",
     "clean": "rm -rf dist/*",
-    "build:parcel": "parcel build src/index.html --no-minify --no-source-maps --public-url https://anaykachifilm.com",
+    "build:parcel": "parcel build src/index.html --no-minify --no-source-maps --public-url ./",
     "build": "npm run clean && npm run build:parcel",
     "deploy": "gh-pages -d dist"
   },
@@ -15,7 +15,7 @@
     "url": "git://github.com/codrops/BackgroundScaleHoverEffect.git"
   },
   "keywords": [],
-  "author": "Codrops",
+  "author": "Juan",
   "license": "MIT",
   "homepage": "https://anaykachifilm.com",
   "dependencies": {
