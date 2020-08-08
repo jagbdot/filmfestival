@@ -8,6 +8,10 @@
 	font-size: 14px;
 }
 
+html.sr .load-hidden {
+    visibility: hidden;
+}
+
 body {
 	margin: 0;
 	--color-text: #e5e3e0;
@@ -48,7 +52,7 @@ body {
 
 .demo-3 {
 	--color-text: #ece9f0;
-	--color-bg: #dde8eb;
+	--color-bg: #000;
 	--color-link: #ccc;
 	--color-link-hover: #fff;
 	--color-title: #737476;
@@ -85,6 +89,9 @@ body {
 	content: '';
 	position: fixed;
 	z-index: 1100;
+	transition: width 2s linear 1s;
+	opacity: 0;
+	transition-timing-function: ease-in;
 }
 
 .js .loading::before {
@@ -93,17 +100,20 @@ body {
 	width: 100%;
 	height: 100%;
 	background: var(--color-bg);
+	transition: width 2s linear 1s;
+	opacity: 1;
+
 }
 
 .js .loading::after {
 	top: 47.5%;
 	left: 47.5%;
 	margin: -30px 0 0 -30px;
-width: 0;
-height: 0;
-border-style: solid;
-border-width: 0 65px 100px 65px;
-border-color: transparent transparent #000 transparent;
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 0 65px 100px 65px;
+		border-color: transparent transparent #fff transparent;
 	opacity: 0.4;
 	animation: loaderAnim 0.4s linear infinite alternate forwards;
 }
@@ -150,7 +160,7 @@ main {
 
 .frame__header--grid::before,
 .frame__header--grid::after {
-	content: '---';	
+	content: '———';	
 }
 
 .frame__header--grid::before {
@@ -303,7 +313,7 @@ main {
 		height: 100vh;
 		padding: 3rem 4rem;
 		pointer-events: none;
-		grid-template-columns: 40% 40% 20%;
+		grid-template-columns: 30% 40% 30%;
 		grid-template-rows: auto auto auto;
 		grid-template-areas: 'header pagetitle menu'
 							'... ... ...'
@@ -394,11 +404,18 @@ a:focus {
 .icon {
 	display: inline-block;
 	width: 2.2em;
-    height: 1.2em;
+    height: 1.5em;
 	margin: 0 auto;
 	fill: currentColor;
 	position: relative;
     top: 4px;
+}
+
+.laurel{
+	display: block;
+	margin: 0 auto;
+	width: 3.4em;
+    height: 3.4em;
 }
 
 main {
