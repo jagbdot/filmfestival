@@ -141,6 +141,10 @@ main {
 	position: relative;
 }
 
+.laurel{
+	opacity: 0.8;
+}
+
 .frame {
 	padding: 3rem 5vw;
 	position: relative;
