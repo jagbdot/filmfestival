@@ -416,10 +416,22 @@ a:focus {
 }
 
 .laurel{
-	display: block;
-	margin: 0 auto;
+	display: inline-block;
+	margin: 0px 20px;
 	width: 3.4em;
     height: 3.4em;
+}
+
+.laurel-aside{
+	display: inline-block;
+	width: auto;
+    height: 3.4em;
+}
+
+.frame__page-title{
+	text-align: center;
+	margin: 0 auto;
+	padding-right: 25px;
 }
 
 main {
